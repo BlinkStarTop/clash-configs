@@ -1,5 +1,12 @@
+port: 7899
+socks-port: 7898
+mixed-port: 7897
+allow-lan: false
+mode: rule
+log-level: info
+
 proxies:
-  - name: 🇺🇸 美国-拉斯维加斯-001
+  - name: "🇺🇸 美国-拉斯维加斯-001"
     type: vmess
     server: 45.147.201.231
     port: 20053
@@ -10,14 +17,14 @@ proxies:
     udp: true
     client-fingerprint: chrome
     ws-opts:
-      path: /
+      path: "/"
 
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: "🚀 节点选择"
     type: select
     proxies:
-      - 🇺🇸 美国-拉斯维加斯-001
-      - DIRECT
+      - "🇺🇸 美国-拉斯维加斯-001"
+      - "DIRECT"
 
 rules:
   - MATCH,🚀 节点选择
