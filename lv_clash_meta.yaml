@@ -1,0 +1,23 @@
+proxies:
+  - name: 🇺🇸 美国-拉斯维加斯-001
+    type: vmess
+    server: 45.147.201.231
+    port: 20053
+    uuid: e957bbf1-ded1-4fd6-9619-896397985f64
+    cipher: auto
+    network: ws
+    tls: false
+    udp: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🇺🇸 美国-拉斯维加斯-001
+      - DIRECT
+
+rules:
+  - MATCH,🚀 节点选择
