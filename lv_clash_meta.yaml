@@ -15,9 +15,9 @@ proxies:
     network: ws
     tls: false
     udp: true
-    client-fingerprint: chrome
     ws-opts:
       path: "/"
+      headers: {}
 
 proxy-groups:
   - name: "🚀 节点选择"
